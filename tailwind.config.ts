@@ -12,6 +12,15 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        geistSans: ["var(--font-geist-sans)", "sans-serif"],
+        geistMono: ["var(--font-geist-mono)", "monospace"],
+        montserrat: ["montserrat", "sans-serif"],
+        norican: ["norican", "serif"],
+        sourceSerif4: ['sourceSerif4', 'serif'],
+        leagueScript: ['league Script', 'cursive'],
+      },  
+
     },
   },
   plugins: [],
