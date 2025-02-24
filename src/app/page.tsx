@@ -5,7 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 //import Image from "next/image";
 
 export default function Home() {
-    const [isPlaying, setIsPlaying] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(true);
 
     const toggleMusic = () => {
         const audio = document.getElementById(
