@@ -5,19 +5,19 @@ import { useState, useEffect, useCallback } from "react";
 //import Image from "next/image";
 
 export default function Home() {
-    // const [isPlaying, setIsPlaying] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(true);
 
-    // const toggleMusic = () => {
-    //     const audio = document.getElementById(
-    //         "backgroundMusic"
-    //     ) as HTMLAudioElement;
-    //     if (isPlaying) {
-    //         audio.pause();
-    //     } else {
-    //         audio.play();
-    //     }
-    //     setIsPlaying(!isPlaying);
-    // };
+    const toggleMusic = () => {
+        const audio = document.getElementById(
+            "backgroundMusic"
+        ) as HTMLAudioElement;
+        if (isPlaying) {
+            audio.pause();
+        } else {
+            audio.play();
+        }
+        setIsPlaying(!isPlaying);
+    };
     return (
         // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         //   <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
@@ -115,27 +115,10 @@ export default function Home() {
         //   </footer>
         // </div>
         <>
-            {/* <button
-                className="fixed top-5 right-5 z-50 border-2 rounded-full bg-slate-400 h-10 w-10 flex items-center justify-center animate-pulse"
-                onClick={toggleMusic}
-            >
-                {isPlaying ? (
-                    <span className="material-symbols-outlined" title="Pause">
-                        play_disabled
-                    </span>
-                ) : (
-                    <span
-                        className="material-symbols-outlined text-3xl"
-                        title="Play"
-                    >
-                        play_arrow
-                    </span>
-                )}
-            </button> */}
-            {/* <audio id="backgroundMusic" autoPlay loop>
+            <audio id="backgroundMusic" autoPlay loop>
                 <source src="/music.mp3" type="audio/mpeg" />
                 Tu navegador no soporta audio.
-            </audio> */}
+            </audio>
 
             <section className=" bg-slate-100  flex flex-col justify-center items-center h-[90dvh]">
                 <h1 className="text-6xl md:text-9xl text-cyan-950 font-bold font-montserrat">
@@ -144,6 +127,29 @@ export default function Home() {
                 <p className="font-leagueScript font-extrabold text-6xl">
                     mis 15!
                 </p>
+                <button
+                    className="border-2 rounded-full bg-slate-500 h-32 w-32 flex items-center justify-center animate-pulse"
+                    onClick={toggleMusic}
+                >
+                    {isPlaying ? (
+                        <span
+                            className="material-symbols-outlined text-7xl text-white"
+                            title="Pause"
+                        >
+                            pause
+                        </span>
+                    ) : (
+                        <div className="flex flex-col items-center">
+                            <span
+                                className="material-symbols-outlined text-7xl text-white"
+                                title="Play"
+                            >
+                                play_arrow
+                            </span>
+                            <span className="text-2xl text-white">MUSIC</span>
+                        </div>
+                    )}
+                </button>
                 <span className="material-symbols-outlined animate-bounce absolute bottom-32 text-5xl text-cyan-950 font-bold">
                     keyboard_double_arrow_down
                 </span>
@@ -254,49 +260,6 @@ export default function Home() {
 
             <section className="flex flex-col p-10 justify-center items-center h-auto bg-cyan-950 text-white gap-4">
                 <p className="font-norican font-bold text-6xl">¡Gracias!</p>
-            </section>
-
-            <section className="flex flex-col p-10 justify-center items-center h-auto bg-slate-100 gap-4">
-                <iframe
-                    width="50%"
-                    height="166"
-                    scrolling="no"
-                    frameBorder="no"
-                    allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/652346984&color=%231463c2&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-                ></iframe>
-                <div
-                    style={{
-                        fontSize: "10px",
-                        color: "#cccccc",
-                        lineBreak: "anywhere",
-                        wordBreak: "normal",
-                        overflow: "hidden",
-                        whiteSpace: "nowrap",
-                        textOverflow: "ellipsis",
-                        fontFamily:
-                            "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
-                        fontWeight: 100,
-                    }}
-                >
-                    <a
-                        href="https://soundcloud.com/user-371650973"
-                        title="Abba Time"
-                        target="_blank"
-                        style={{ color: "#cccccc", textDecoration: "none" }}
-                    >
-                        Abba Time
-                    </a>{" "}
-                    ·{" "}
-                    <a
-                        href="https://soundcloud.com/user-371650973/dancing-queen"
-                        title="Dancing Queen"
-                        target="_blank"
-                        style={{ color: "#cccccc", textDecoration: "none" }}
-                    >
-                        Dancing Queen
-                    </a>
-                </div>
             </section>
         </>
     );
