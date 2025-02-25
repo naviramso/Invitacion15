@@ -124,7 +124,10 @@ export default function Home() {
                         play_disabled
                     </span>
                 ) : (
-                    <span className="material-symbols-outlined text-3xl" title="Play">
+                    <span
+                        className="material-symbols-outlined text-3xl"
+                        title="Play"
+                    >
                         play_arrow
                     </span>
                 )}
@@ -138,7 +141,7 @@ export default function Home() {
                     TATIANA
                 </h1>
                 <p className="font-leagueScript font-extrabold text-6xl">
-                    mis xv!
+                    mis 15!
                 </p>
                 <span className="material-symbols-outlined animate-bounce absolute bottom-32 text-5xl text-cyan-950 font-bold">
                     keyboard_double_arrow_down
@@ -146,6 +149,13 @@ export default function Home() {
             </section>
 
             <section className="flex flex-col p-10 justify-center items-center h-auto bg-cyan-950 text-white gap-4">
+                <img
+                    src="/2.jpg"
+                    alt="Fiesta"
+                    width={500}
+                    height={500}
+                    className="rounded-2xl shadow-2xl border-4 border-white"
+                />
                 <p className="font-montserrat font-bold text-2xl">
                     1 DE MARZO DE 2025
                 </p>
@@ -159,6 +169,13 @@ export default function Home() {
             </section>
 
             <section className="flex flex-col p-10 justify-center items-center h-auto bg-slate-100 gap-4">
+                <img
+                    src="/1.png"
+                    alt="Fiesta"
+                    width={500}
+                    height={500}
+                    className="rounded-2xl shadow-2xl border-4 border-cyan-950"
+                />
                 <img
                     src="https://yendo.com.ar/wp-content/uploads/2024/03/Fiestaazul15.gif"
                     alt="Fiesta"
@@ -184,7 +201,15 @@ export default function Home() {
                 </a>
             </section>
 
-            <section className="flex flex-col  justify-center items-center h-1 bg-cyan-950 text-white"></section>
+            <section className="flex flex-col  justify-center items-center p-10 bg-cyan-950 text-white h-auto    ">
+                <img
+                    src="/3.png"
+                    alt="Fiesta"
+                    width={500}
+                    height={500}
+                    className="rounded-2xl shadow-2xl border-4 border-white"
+                />
+            </section>
 
             <section className="flex flex-col p-10 justify-center items-center h-auto bg-slate-100 gap-4 text-center">
                 <img
