@@ -5,7 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 //import Image from "next/image";
 
 export default function Home() {
-    const [isPlaying, setIsPlaying] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(false);
 
     const toggleMusic = () => {
         const audio = document.getElementById(
@@ -115,7 +115,7 @@ export default function Home() {
         //   </footer>
         // </div>
         <>
-            <audio id="backgroundMusic" autoPlay loop>
+            <audio id="backgroundMusic" loop>
                 <source src="/music.mp3" type="audio/mpeg" />
                 Tu navegador no soporta audio.
             </audio>
