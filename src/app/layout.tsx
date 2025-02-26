@@ -34,7 +34,7 @@ export default function RootLayout({
                     content="¡Celebra los XV años de Tatiana con nosotros! Fecha: 1 de Marzo de 2025. Lugar: Casa de la familia"
                 />
                 <meta property="og:image" content="/page.png" />
-                <meta property="og:url" content="https://tudominio.com" />
+                <meta property="og:url" content="https://invitacion15.vercel.app/" />
                 <meta property="og:type" content="website" />
             </head>
             <body
